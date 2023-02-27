@@ -11,7 +11,7 @@
 #   UD data to some directory, set UDBASE to that directory, and
 #   uncomment this line.  Alternatively, put UDBASE in your shell
 #   config, Windows env variables, etc as relevant.
-# export UDBASE=/path/to/UD
+export UDBASE=$HOME/data/ud
 
 # Set NERBASE to the location of NER data folder
 # The data should be BIO format or convertable to that format
@@ -35,7 +35,7 @@
 # $DATA_ROOT is a default home for where all the outputs from the
 #   preparation scripts will go.  The training scripts will then look
 #   for the stanza formatted data in that directory.
-export DATA_ROOT=./data
+export DATA_ROOT=$HOME/data/stanza_data
 export TOKENIZE_DATA_DIR=$DATA_ROOT/tokenize
 export MWT_DATA_DIR=$DATA_ROOT/mwt
 export LEMMA_DATA_DIR=$DATA_ROOT/lemma

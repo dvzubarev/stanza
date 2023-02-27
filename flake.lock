@@ -1,0 +1,132 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1666275482,
+        "narHash": "sha256-P5cxOmp1Yi2miEDLQas8GLQQ4W54zYgHd2frvs+lERQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d639b2dfacdb3464faa11936a8c751ea3ff57775",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "rev": "d639b2dfacdb3464faa11936a8c751ea3ff57775",
+        "type": "indirect"
+      }
+    },
+    "pyexbase": {
+      "inputs": {
+        "textapp-pkgs": [
+          "udpipe_ext",
+          "pylp",
+          "textapp-pkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1670275357,
+        "narHash": "sha256-BL8rfenwD2CyWWPN+o58xzVmYnqn/+do+ikRw6SFze4=",
+        "ref": "refs/heads/master",
+        "rev": "2f12b5e9bfad6d25619849907a728a924b0a6f55",
+        "revCount": 17,
+        "type": "git",
+        "url": "ssh://git@tsa04.isa.ru/textapp/pyexbase"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@tsa04.isa.ru/textapp/pyexbase"
+      }
+    },
+    "pylp": {
+      "inputs": {
+        "pyexbase": "pyexbase",
+        "textapp-pkgs": [
+          "udpipe_ext",
+          "textapp-pkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671459618,
+        "narHash": "sha256-qK0xvgGzaClbVsyoApNs31iZfmo6lk2TYaG2TqVcqf4=",
+        "ref": "refs/heads/master",
+        "rev": "e68873267317f1ff36f239201ae3bd7e74697a12",
+        "revCount": 95,
+        "type": "git",
+        "url": "ssh://git@tsa04.isa.ru/textapp/pylp"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@tsa04.isa.ru/textapp/pylp"
+      }
+    },
+    "razdel-fork": {
+      "inputs": {
+        "textapp-pkgs": [
+          "udpipe_ext",
+          "textapp-pkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1674751361,
+        "narHash": "sha256-WU0cdT/swOOLK4uVXTuKDd0X6JdynSw5leUA2uor5Zg=",
+        "owner": "dvzubarev",
+        "repo": "razdel",
+        "rev": "fdbe83692f94f6598edf63d81eb7b992306fcace",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dvzubarev",
+        "repo": "razdel",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "textapp-pkgs": "textapp-pkgs",
+        "udpipe_ext": "udpipe_ext"
+      }
+    },
+    "textapp-pkgs": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1677499689,
+        "narHash": "sha256-RfINAKjCb/InY1bdc2DYrzvLFEey9TrF5eDj7lBk0j0=",
+        "ref": "refs/heads/master",
+        "rev": "7973318591a625d3bec6ec506a7bfce6511c8820",
+        "revCount": 144,
+        "type": "git",
+        "url": "ssh://git@tsa04.isa.ru/textapp/textapp-pkgs"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@tsa04.isa.ru/textapp/textapp-pkgs"
+      }
+    },
+    "udpipe_ext": {
+      "inputs": {
+        "pylp": "pylp",
+        "razdel-fork": "razdel-fork",
+        "textapp-pkgs": [
+          "textapp-pkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1677499985,
+        "narHash": "sha256-pN+xCjZZg940a27I+1Czl/53ML0ijudEUOwI6hWVcrs=",
+        "ref": "refs/heads/master",
+        "rev": "ab98ef48c8399babcacdfefc9573eb9aa0c6e41e",
+        "revCount": 293,
+        "type": "git",
+        "url": "ssh://git@tsa04.isa.ru/textapp/udpipe_ext"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@tsa04.isa.ru/textapp/udpipe_ext"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
