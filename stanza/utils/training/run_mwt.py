@@ -18,6 +18,7 @@ parameter to mark where the mwt arguments start.
 
 import logging
 import math
+import os.path
 
 from stanza.models import mwt_expander
 from stanza.models.common.doc import Document
@@ -33,6 +34,9 @@ def check_mwt(filename):
     """
     Checks whether or not there are MWTs in the given conll file
     """
+    if not os.path.exists(filename):
+        return False
+
     doc = CoNLL.conll2doc(filename)
     data = doc.get_mwt_expansions(False)
     return len(data) > 0
