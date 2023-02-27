@@ -316,9 +316,12 @@ def main(run_treebank, model_dir, model_name, add_specific_args=None):
             run_treebank(mode, paths, treebank, short_name,
                          None, command_args, extra_args + save_name_args)
 
-def run_eval_script(gold_conllu_file, system_conllu_file, evals=None):
+def run_eval_script(gold_conllu_file, system_conllu_file, evals=None, return_raw_eval=False):
     """ Wrapper for lemma scorer. """
     evaluation = ud_scores(gold_conllu_file, system_conllu_file)
+
+    if return_raw_eval:
+        return evaluation
 
     if evals is None:
         return ud_eval.build_evaluation_table(evaluation, verbose=True, counts=False, enhanced=False)

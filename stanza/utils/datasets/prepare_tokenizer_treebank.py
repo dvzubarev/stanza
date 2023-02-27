@@ -1111,10 +1111,10 @@ def process_treebank(treebank, paths, args):
         build_combined_dataset(paths, short_name, args.augment)
     elif short_name in BIO_DATASETS:
         build_bio_dataset(paths, udbase_dir, tokenizer_dir, handparsed_dir, short_name, args.augment)
-    elif short_name.startswith("en_gum"):
-        # we special case GUM because it should include a filled-out GUMReddit
-        print("Preparing data for %s: %s, %s" % (treebank, short_name, short_language))
-        build_combined_english_gum(udbase_dir, tokenizer_dir, short_name, args.augment)
+    # elif short_name.startswith("en_gum"):
+    #     # we special case GUM because it should include a filled-out GUMReddit
+    #     print("Preparing data for %s: %s, %s" % (treebank, short_name, short_language))
+    #     build_combined_english_gum(udbase_dir, tokenizer_dir, short_name, args.augment)
     else:
         # check that we can find the train file where we expect it
         train_conllu_file = common.find_treebank_dataset_file(treebank, udbase_dir, "train", "conllu", fail=True)

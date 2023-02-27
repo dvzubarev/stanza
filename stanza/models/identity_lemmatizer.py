@@ -52,6 +52,7 @@ def main(args=None):
 
     # use identity mapping for prediction
     preds = batch.doc.get([TEXT])
+    preds = [s.lower() for s in preds]
 
     # write to file and score
     batch.doc.set([LEMMA], preds)
