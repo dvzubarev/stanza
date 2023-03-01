@@ -70,7 +70,6 @@ run_en_ete() {
 
 
 # * ru
-# make_ru_custom ru_tok1_tokenizer_4-3 ru_tag4f_tagger_f2-1-e ru_tag4f_lemma_def ru_tag4f_parser_f1-5-e
 make_ru_custom ru_tok1_tokenizer_4-3 ru_tag4f2_tagger_f2-1-e ru_tag4f_lemma_dict ru_tag4f2_parser_f1-2-2-e
 
 run_ete test UD_Russian-Tag4f2 emb2-5
@@ -88,7 +87,7 @@ run_en_ete test UD_English-PUDFixed emb2-5
 
 
 # * ru-en
-make_ru_custom ru_tok1_tokenizer_4-3 ru_ruen1_tagger_f1-2-e ru_tag4f_lemma_dict ru_ruen2_parser_f1-1-e
+make_ru_custom ru_tok1_tokenizer_4-3 ru_ruen1_tagger_f1-2-e ru_tag4f_lemma_dict ru_ruen2_parser_f1-3-e
 
 run_ete test UD_Russian-SynTagFixed embC-1
 run_ete test UD_Russian-TaigaFixed embC-1
