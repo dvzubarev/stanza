@@ -9,7 +9,7 @@
     let pkgs = import textapp-pkgs.inputs.nixpkgs {
           system = "x86_64-linux";
           overlays = [ textapp-pkgs.overlays.default udpipe_ext.overlays.default ];
-          config.allowUnfree = true;
+          config = textapp-pkgs.passthru.pkgs-config;
         };
         tlib = textapp-pkgs.lib;
         pypkgs = pkgs.python-torch.pkgs;
@@ -26,9 +26,8 @@
             pypkgs.pylint
             pypkgs.ipykernel
           ];
-
           shellHook=''
-          export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/nvidia/current/:$LD_LIBRARY_PATH
+          export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/nvidia/current/:${pkgs.stdenv.cc.cc.lib}/lib/
           source ./scripts/config.sh
           [ -n "$PS1" ] && setuptoolsShellHook
           '';
